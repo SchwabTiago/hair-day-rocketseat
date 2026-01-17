@@ -1,0 +1,26 @@
+{
+  "name": "hairday",
+  "description": "Aplicação Web de gerenciamento para corte de cabelo",
+  "author": "Tiago Schwab",
+  "dependencies": {
+    "dayjs": "^1.11.19",
+    "json-server": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.6",
+    "@babel/preset-env": "^7.28.6",
+    "babel-loader": "^10.0.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.6",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  },
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "server": "json-server --watch server.json --port 3333"
+  }
+}

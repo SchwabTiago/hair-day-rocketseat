@@ -3,16 +3,16 @@
   padding: 5rem 7.75rem;
 }
 
-.schedule > header {
+.schedule>header {
   margin-bottom: 2rem;
 }
 
-.schedule > header h1 {
+.schedule>header h1 {
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.schedule > header p {
+.schedule>header p {
   color: #98959d;
   font-size: 0.87rem;
 }
@@ -87,7 +87,7 @@
     padding: 1.5rem;
   }
 
-  .schedule > header {
+  .schedule>header {
     flex-direction: column;
   }
 }
