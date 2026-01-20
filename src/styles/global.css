@@ -28,11 +28,18 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: calc(100vh - 1.5rem);
+  grid-template-columns: minmax(320px, 560px) minmax(0, 1fr);
   grid-template-areas: "form schedule";
+  align-items: start;
 
-  padding: 0.75rem;
+  min-height: 100vh;
+
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  gap: clamp(1rem, 2vw, 2rem);
+  max-width: 1200px;
+  margin: 0 auto;
+
+  position: relative;
 }
 
 .logo {
@@ -46,15 +53,27 @@ body {
 
   height: 3.5rem;
   width: 8.7rem;
+
+  z-index: 10;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   :root {
     font-size: 14px;
   }
 
   .container {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "form"
+      "schedule";
+  }
+
+  .logo {
+    position: static;
+    border-bottom-right-radius: 0;
+    border-radius: 0.75rem;
+    margin-bottom: 0.75rem;
+    justify-self: start;
   }
 }

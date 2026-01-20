@@ -1,17 +1,21 @@
 .form {
   grid-area: form;
-  max-width: 512px;
+
+  width: 100%;
+  max-width: 560px;
 
   background-color: #232225;
   border-radius: 0.75rem;
 
-  padding: 5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
   padding-bottom: 1.5rem;
 
   display: flex;
   flex-direction: column;
 
-  overflow-y: scroll;
+  overflow: auto;
+
+  margin-top: 3.75rem;
 }
 
 .form>header {
@@ -103,11 +107,13 @@
 }
 
 .hour {
-  width: 4.87rem;
+  width: auto;
+  min-width: 4.75rem;
   height: 2.5rem;
 
-  border-radius: 0.5rem;
+  padding: 0 0.75rem;
 
+  border-radius: 0.5rem;
   font-size: 1rem;
   border: 1px solid #3e3c41;
 
@@ -132,7 +138,6 @@
 
 .hour-unavailable {
   opacity: 0.5;
-
   cursor: not-allowed;
 }
 
@@ -146,9 +151,9 @@
   color: #b8952e;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1024px) {
   .form {
-    overflow-y: auto;
     max-width: 100%;
+    margin-top: 0;
   }
 }
